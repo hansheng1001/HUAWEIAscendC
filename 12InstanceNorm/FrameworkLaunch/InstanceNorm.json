@@ -1,0 +1,94 @@
+[
+    {
+        "op": "InstanceNorm",
+        "language": "cpp",
+        "input_desc": [
+            {
+                "name": "x",
+                "param_type": "required",
+                "format": [
+                    "ND",
+                    "ND"
+                ],
+                "type": [
+                    "fp16",
+                    "fp32"
+                ]
+            },
+            {
+                "name": "gamma",
+                "param_type": "required",
+                "format": [
+                    "ND",
+                    "ND"
+                ],
+                "type": [
+                    "fp16",
+                    "fp32"
+                ]
+            },
+            {
+                "name": "beta",
+                "param_type": "required",
+                "format": [
+                    "ND",
+                    "ND"
+                ],
+                "type": [
+                    "fp16",
+                    "fp32"
+                ]
+            }
+        ],
+        "output_desc": [
+            {
+                "name": "y",
+                "param_type": "required",
+                "format": [
+                    "ND",
+                    "ND"
+                ],
+                "type": [
+                    "fp16",
+                    "fp32"
+                ]
+            },
+            {
+                "name": "mean",
+                "format": [
+                    "ND",
+                    "ND"
+                ],
+                "type": [
+                    "fp16",
+                    "fp32"
+                ]
+            },
+            {
+                "name": "variance",
+                "format": [
+                    "ND",
+                    "ND"
+                ],
+                "type": [
+                    "fp16",
+                    "fp32"
+                ]
+            }
+        ],
+        "attr": [
+            {
+                "name": "data_format",
+                "param_type": "optional",
+                "type": "string",
+                "default_value": "NHWC"
+            },
+            {
+                "name": "epsilon",
+                "param_type": "optional",
+                "type": "float",
+                "default_value": "0.0"
+            }
+        ]
+    }
+]
